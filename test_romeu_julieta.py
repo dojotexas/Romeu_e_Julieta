@@ -4,18 +4,16 @@ import unittest
 from app import romeu_julieta
 
 class TestRomeuJulieta(unittest.TestCase):
-    def test_valor1(self):
-    	self.assertEqual(romeu_julieta(1),'1')
-    def test_queijo(self):
-    	self.assertEqual(romeu_julieta(3),'queijo')
-    def test_valor4(self):
-    	self.assertEqual(romeu_julieta(4),'4')
-    def test_goiabada(self):
-    	self.assertEqual(romeu_julieta(5),'goiabada')
-    def test_romeujulieta(self):
-    	self.assertEqual(romeu_julieta(15), 'Romeu e Julieta')
-    def test_romeujulieta30(self):
-    	self.assertEqual(romeu_julieta(30), 'Romeu e Julieta')
+    def test_multiplo3(self):
+    	self.assertEqual(romeu_julieta(3),'Queijo')
+    def test_multiplo5(self):
+        self.assertEqual(romeu_julieta(5),'Goiabada')
+    def test_multiplo3and5(self):
+        self.assertEqual(romeu_julieta(15),'Romeu e Julieta')
+    def test_difrente3or(self):
+        self.assertEqual(romeu_julieta(1),1)
+    def test_diferenteValor(self):
+        self.assertEqual(romeu_julieta(23948734986734987256),"Queijo")
 
 if __name__== '__main__':
     unittest.main()
